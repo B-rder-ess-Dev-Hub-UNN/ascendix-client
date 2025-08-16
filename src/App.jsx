@@ -9,6 +9,7 @@ import PrimaryLayout from './layouts/PrimaryLayout';
 import Profile from './pages/Profile';
 import SettingPage from './pages/SettingPage';
 import HelpCenter from './pages/HelpCenter';
+import HomePage from './pages/HomePage';
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         </Route>
 
         <Route element={<PrimaryLayout />}>
+          <Route path="/home" element={<HomePage />} />
           <Route path="/email" element={<EmailVerified />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<SettingPage />} />
