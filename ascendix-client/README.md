@@ -1,2 +1,0 @@
-# ascendix-client
-Ascendix Client
