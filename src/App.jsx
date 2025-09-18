@@ -10,6 +10,10 @@ import Profile from './pages/Profile';
 import SettingPage from './pages/SettingPage';
 import HelpCenter from './pages/HelpCenter';
 import HomePage from './pages/HomePage';
+import CourseOutline from './pages/CourseOutline';
+import LeaderBoard from "./pages/LeaderBoard";
+import Certification from "./pages/Certification";
+import Assessment from "./pages/Assessment";
 
 
 const App = () => {
@@ -30,6 +34,10 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<SettingPage />} />
           <Route path="/help" element={<HelpCenter />} />
+          <Route path="/course-outline" element={<CourseOutline />} />
+          <Route path="/leaderboard" element={<LeaderBoard />} />
+          <Route path="/certification" element={<Certification />} />
+          <Route path="/assessment" element={<Assessment />} />
         </Route>
       </Routes>
     </>
