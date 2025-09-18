@@ -8,11 +8,11 @@ import Reddits from "../assets/images/Reddits.png";
 const HelpCenter = () => {
   return (
     <section className="min-h-screen flex flex-col  bg-[#1D1751] p-5 md:p-20 text-white space-y-10">
-      <span className="flex space-x-2 items-center">
+      <span className="hidden md:flex space-x-2 items-center">
         <FaArrowLeft />
         <h1 className="font-extrabold text-xl">Help Center</h1>
       </span>
-      <div className="flex items-center justify-between">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10">
         <Link to=""><img src={Discord} alt="Discord" /></Link>
         <Link to=""><img src={Github} alt="Github" /></Link>
         <Link to=""><img src={Twitter} alt="Twitter" /></Link>

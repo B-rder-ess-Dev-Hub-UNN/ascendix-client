@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import CourseImage from "../assets/images/CourseImage.png";
+import CourseImage from "../../assets/images/CourseImage.png";
 
 const questions = [
   {

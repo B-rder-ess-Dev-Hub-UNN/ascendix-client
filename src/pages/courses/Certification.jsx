@@ -1,20 +1,20 @@
 import { FaShareSquare, FaDownload, FaArrowLeft } from "react-icons/fa";
-import Certificate from "../assets/images/Certificate.png";
-import Nft from "../assets/images/Nft.png";
+import Certificate from "../../assets/images/Certificate.png";
+import Nft from "../../assets/images/Nft.png";
 
 const Certification = () => {
   return (
-    <div className="min-h-screen bg-[#1D1751] text-white px-20 py-10 flex flex-col space-y-10">
+    <div className="min-h-screen bg-[#1D1751] text-white p-5 md:p-20 flex flex-col space-y-10">
       {/* Back Button */}
       <button className="flex items-center space-x-4">
         <FaArrowLeft className="text-xl" />
         <span className="text-xl">Certification</span>
       </button>
 
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 space-y-10 md:grid-cols-2 md:gap-10">
 
         {/* left div  */}
-        <div className="flex flex-col justify-between space-y-5">
+        <div className="flex flex-col space-y-5">
           {/* Completion Card */}
           <div className="bg-[#4b5563] px-4 py-8 flex items-center space-x-4">
             {/* replace with user details  */}
@@ -61,9 +61,9 @@ const Certification = () => {
         </div>
 
         {/* right div  */}
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col">
           {/* Certificate Preview */}
-          <div className="w-full h-96 flex items-center justify-center">
+          <div className="w-ful h-96 flex items-center justify-center">
             <img
               src={Certificate}
               alt="Certificate"

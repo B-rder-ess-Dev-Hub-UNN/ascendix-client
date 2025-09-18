@@ -18,10 +18,11 @@ import QuestDetail from './pages/quests/Detail';
 import CoursesList from './pages/courses/Index';
 import CourseDetail from './pages/courses/Detail';
 import OngoingCourses from './pages/courses/Ongoing';
-import CourseNav from './pages/courses/Nav';import CourseOutline from './pages/CourseOutline';
+import CourseNav from './pages/courses/Nav';
+import CourseModule from './pages/courses/Module';
 import LeaderBoard from "./pages/LeaderBoard";
-import Certification from "./pages/Certification";
-import Assessment from "./pages/Assessment";
+import Certification from "./pages/courses/Certification";
+import Assessment from "./pages/courses/Grade";
 
 
 const App = () => {
@@ -51,10 +52,10 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<SettingPage />} />
           <Route path="/help" element={<HelpCenter />} />
-          <Route path="/course-outline" element={<CourseOutline />} />
+          <Route path="/courses/module" element={<CourseModule />} />
           <Route path="/leaderboard" element={<LeaderBoard />} />
           <Route path="/certification" element={<Certification />} />
-          <Route path="/assessment" element={<Assessment />} />
+          <Route path="/courses/grade" element={<Assessment />} />
         </Route>
       </Routes>
     </>

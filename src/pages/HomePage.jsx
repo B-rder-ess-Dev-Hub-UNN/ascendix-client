@@ -30,7 +30,7 @@ const HomePage = () => {
       <div className="flex flex-col space-y-5">
         <div className="flex items-center space-x-8">
           <p className="font-medium text-xl">Top Quest Picked</p>
-          <Link to="#" className="flex items-center space-x-2">
+          <Link to="/quests" className="flex items-center space-x-2">
             <span className="font-medium text-[#B6E63A]">View all</span>
             <FaArrowRight className="" />
           </Link>
@@ -43,7 +43,7 @@ const HomePage = () => {
       <div className="flex flex-col space-y-5">
         <div className="flex items-center space-x-8">
           <p className="font-medium text-xl">Leaderboard</p>
-          <Link to="#" className="flex items-center space-x-2">
+          <Link to="/leaderboard" className="flex items-center space-x-2">
             <span className="font-medium text-[#B6E63A]">View all</span>
             <FaArrowRight className="" />
           </Link>

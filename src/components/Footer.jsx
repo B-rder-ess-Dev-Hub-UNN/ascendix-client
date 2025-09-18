@@ -41,8 +41,8 @@ const Footer = () => {
       </div>
 
       {/* mobile footer  */}
-      <div className="flex flex-col space-y-2 items-center md:hidden">
-        <span className="text-xl">ascendix</span>
+      <div className="flex justify-between items-center md:hidden">
+        <span className="text-xl font-bold">ascendix</span>
 
         <div className="flex space-x-4">
           <Link to="#" target="_blank">
@@ -62,17 +62,6 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="flex space-x-4">
-          <Link to="#" className="cursor-pointer">
-            Term of use
-          </Link>
-          <Link to="#" className="cursor-pointer">
-            Privacy Policy
-          </Link>
-          <Link to="#" className="cursor-pointer">
-            Help center
-          </Link>
-        </div>
       </div>
     </section>
   );

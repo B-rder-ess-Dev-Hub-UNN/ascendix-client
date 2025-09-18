@@ -1,9 +1,9 @@
-import CourseImage from "../assets/images/CourseImage.png";
+import CourseImage from "../../assets/images/CourseImage.png";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { MdDeveloperBoard } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-const CourseOutline = () => {
+const CourseModule = () => {
   const modules = [
     { name: "Module 1", status: "Completed", percent: "10%", grade: "100%" },
     { name: "Module 2", status: "Completed", percent: "20%", grade: "80%" },
@@ -99,4 +99,4 @@ const CourseOutline = () => {
   );
 };
 
-export default CourseOutline;
+export default CourseModule;

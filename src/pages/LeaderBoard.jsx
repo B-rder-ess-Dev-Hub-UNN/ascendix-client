@@ -51,7 +51,7 @@ const LeaderBoard = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#1D1751] text-white p-6">
+    <div className="flex justify-center items-center min-h-screen bg-[#1D1751] text-white md:p-6">
       <div className="w-full max-w-3xl bg-gradient-to-r from-[#FFFFFF33] to-[#99999933] border-2 border-[#99999933] rounded-4xl p-6 shadow-lg">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
@@ -66,9 +66,11 @@ const LeaderBoard = () => {
             <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-700 to-lime-400"></div>
             <span className="font-semibold">4 Youruiguy</span>
           </div>
-          <div className="flex items-center space-x-2">
-            <img src={ellipse} alt="" className="h-4" />
-            <span className="font-semibold">20k ASC</span>
+          <div className="flex flex-col items-start space-x-2 md:items-center md:flex-row ">
+            <div className="flex items-center space-x-1">
+              <img src={ellipse} alt="" className="h-4" />
+              <span className="font-semibold">20k ASC</span>
+            </div>
             <span className="bg-gradient-to-r from-[#FFFFFF33] to-[#99999933] px-3 py-1 rounded-lg font-semibold">
               $200
             </span>
@@ -76,9 +78,9 @@ const LeaderBoard = () => {
         </div>
 
         {/* Table */}
-        <div className="divide-y divide-gray-700">
+        <div className="divide-y divide-[#99999933]">
           {/* table header */}
-          <div className="flex justify-between items-center p-4">
+          <div className="flex justify-between items-center md:p-4">
             <div className="flex space-x-10 font-semibold">
               <span>#</span>
               <span className="font-semibold">Users</span>
@@ -98,7 +100,7 @@ const LeaderBoard = () => {
 
                 {/* Earnings + Toggle */}
                 <div className="flex flex-col items-end space-y-1">
-                  <div className="flex space-x-1">
+                  <div className="flex flex-col md:flex-row space-x-1">
                     <div className="flex items-center space-x-1">
                       <img src={ellipse} alt="" className="h-4" />
                       <span>{u.asc}</span>
