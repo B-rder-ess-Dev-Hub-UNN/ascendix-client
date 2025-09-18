@@ -10,7 +10,15 @@ import Profile from './pages/Profile';
 import SettingPage from './pages/SettingPage';
 import HelpCenter from './pages/HelpCenter';
 import HomePage from './pages/HomePage';
-
+import Library from './pages/library/Index';
+import LibraryList from './pages/library/List';
+import CourseOutline from './pages/library/Outline';
+import Quests from './pages/quests/Index';
+import QuestDetail from './pages/quests/Detail';
+import CoursesList from './pages/courses/Index';
+import CourseDetail from './pages/courses/Detail';
+import OngoingCourses from './pages/courses/Ongoing';
+import CourseNav from './pages/courses/Nav';
 
 const App = () => {
   return (
@@ -26,6 +34,15 @@ const App = () => {
 
         <Route element={<PrimaryLayout />}>
           <Route path="/home" element={<HomePage />} />
+          <Route path="/library" element={<Library />} />
+          <Route path='/librarylist/:id' element={<LibraryList />} />
+          <Route path="/library/:id" element={<CourseOutline  />} />
+          <Route path="/quests" element={<Quests />} />
+          <Route path="/quests/:id" element={<QuestDetail />} />
+          <Route path="/courses" element={<CoursesList />} />
+          <Route path="/courses/:id" element={<CourseDetail />} />
+          <Route path="/ongoing" element={<OngoingCourses />} />
+          <Route path="/courses/:id/nav" element={<CourseNav />} />
           <Route path="/email" element={<EmailVerified />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<SettingPage />} />
