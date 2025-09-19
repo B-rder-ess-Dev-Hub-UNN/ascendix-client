@@ -23,6 +23,8 @@ import CourseModule from './pages/courses/Module';
 import LeaderBoard from "./pages/LeaderBoard";
 import Certification from "./pages/courses/Certification";
 import Assessment from "./pages/courses/Grade";
+import Survey from './pages/Survey';
+import Task from './pages/Task';
 
 
 const App = () => {
@@ -40,8 +42,8 @@ const App = () => {
         <Route element={<PrimaryLayout />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/library" element={<Library />} />
-          <Route path='/librarylist/:id' element={<LibraryList />} />
-          <Route path="/library/:id" element={<CourseOutline  />} />
+          <Route path="/librarylist/:id" element={<LibraryList />} />
+          <Route path="/library/:id" element={<CourseOutline />} />
           <Route path="/quests" element={<Quests />} />
           <Route path="/quests/:id" element={<QuestDetail />} />
           <Route path="/courses" element={<CoursesList />} />
@@ -56,6 +58,8 @@ const App = () => {
           <Route path="/leaderboard" element={<LeaderBoard />} />
           <Route path="/certification" element={<Certification />} />
           <Route path="/courses/grade" element={<Assessment />} />
+          <Route path="/survey" element={<Survey />} />
+          <Route path="/task" element={<Task />} />
         </Route>
       </Routes>
     </>
