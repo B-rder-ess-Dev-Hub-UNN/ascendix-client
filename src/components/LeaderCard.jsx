@@ -1,5 +1,4 @@
 import leader from "../db/leader";
-import ellipse from "../assets/images/ellipse.png";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -38,7 +37,7 @@ const LeaderCard = () => {
 
             <div className="flex justify-between items-center space-x-2">
               <div className="flex flex-row items-center space-x-2 justify-between">
-                <img src={ellipse} alt="" className="h-5" />
+                <img src="/src/assets/images/ellipse.png" alt="" className="h-5" />
                 <p>{item.token}k ASC Token</p>
               </div>
               <p className="bg-[#D9D9D930] px-3 py-1 rounded-2xl">

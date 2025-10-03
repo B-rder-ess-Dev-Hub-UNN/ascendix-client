@@ -1,7 +1,4 @@
-import logo from "../assets/images/ascendix.png";
 import { Link } from "react-router-dom";
-import avatar from "../assets/images/Avatar.png";
-import notify from "../assets/images/notification.png"
 import { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
@@ -28,7 +25,7 @@ const Navbar = () => {
       <div className="hidden md:flex justify-between items-center">
         <div className="flex items-center space-x-6 ">
           <Link to="/" className="flex items-center space-x-2 cursor-pointer">
-            <img src={logo} alt="Ascendix Logo" className="h-7" />
+            <img src="/src/assets/images/ascendix.png" alt="Ascendix Logo" className="h-7" />
             <span className="text-2xl font-semibold">ascendix</span>
           </Link>
           <div className="flex space-x-4">
@@ -46,7 +43,7 @@ const Navbar = () => {
 
         <div className="flex space-x-4 items-center relative" ref={dropdownRef}>
           <Link>
-            <img src={notify} alt="Notifications" className="h-5" />
+            <img src="/src/assets/images/notification.png" alt="Notifications" className="h-5" />
           </Link>
           <button
             onClick={() => setMenuOpen(!MenuOpen)}
@@ -54,7 +51,7 @@ const Navbar = () => {
             aria-label="User menu"
             aria-expanded={MenuOpen}
           >
-            <img src={avatar} alt="User avatar" className="h-10 rounded-full border-2 border-white/20 hover:border-white/40 transition-colors" />
+            <img src="/src/assets/images/Avatar.png" alt="User avatar" className="h-10 rounded-full border-2 border-white/20 hover:border-white/40 transition-colors" />
           </button>
 
           {/* Desktop Dropdown Menu */}
@@ -114,13 +111,13 @@ const Navbar = () => {
       {/* mobile nav  */}
       <div className="flex justify-between md:hidden">
         <Link to="/" className="flex items-center space-x-2 cursor-pointer">
-          <img src={logo} alt="Ascendix Logo" className="h-7" />
+          <img src="/src/assets/images/ascendix.png" alt="Ascendix Logo" className="h-7" />
           <span className="text-2xl font-semibold">ascendix</span>
         </Link>
 
         <div className="flex items-center space-x-1 relative" ref={dropdownRef}>
           <Link>
-            <img src={notify} alt="Notifications" className="h-5" />
+            <img src="/src/assets/images/notification.png" alt="Notifications" className="h-5" />
           </Link>
           <button
             onClick={() => setMenuOpen(!MenuOpen)}
@@ -128,7 +125,7 @@ const Navbar = () => {
             aria-label="User menu"
             aria-expanded={MenuOpen}
           >
-            <img src={avatar} alt="User avatar" className="h-10 rounded-full border-2 border-white/20 hover:border-white/40 transition-colors" />
+            <img src="/src/assets/images/Avatar.png" alt="User avatar" className="h-10 rounded-full border-2 border-white/20 hover:border-white/40 transition-colors" />
           </button>
         </div>
       </div>

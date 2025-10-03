@@ -1,10 +1,5 @@
 import { FaArrowLeft } from "react-icons/fa";
-import avatar from "../assets/images/Avatar.png";
 import { Link } from "react-router-dom";
-import Help from "../assets/images/Help.png"
-import Logout from "../assets/images/Logout.png";
-import User from "../assets/images/User.png";
-import Wallet from "../assets/images/Wallet.png";
 
 const SettingPage = () => {
   return (
@@ -14,7 +9,7 @@ const SettingPage = () => {
         <h1 className="font-extrabold text-xl">Settings </h1>
       </span>
       <div className="flex items-center space-x-2 md:space-x-5">
-        <img src={avatar} alt="" className="h-10 md:h-30" />
+        <img src="/src/assets/images/Avatar.png" alt="" className="h-10 md:h-30" />
 
         {/* make dynamic for username and id  */}
         <div className="flex flex-col space-y-3">
@@ -27,35 +22,35 @@ const SettingPage = () => {
           to=""
           className="flex items-center space-x-10 p-3 border-t border-[#B6E63A]"
         >
-          <img src={User} alt="" />
+          <img src="/src/assets/images/User.png" alt="" />
           <span className="font-bold">Edit Profile</span>
         </Link>
         <Link
           to=""
           className="flex items-center space-x-10 p-3 border-t border-[#B6E63A]"
         >
-          <img src={Wallet} alt="" />
+          <img src="/src/assets/images/Wallet.png" alt="" />
           <span className="font-bold">Reward History</span>
         </Link>
         <Link
           to=""
           className="flex items-center space-x-10 p-3 border-t border-[#B6E63A]"
         >
-          <img src={Wallet} alt="" />
+          <img src="/src/assets/images/Wallet.png" alt="" />
           <span className="font-bold">Change wallet</span>
         </Link>
         <Link
           to=""
           className="flex items-center space-x-10 p-3 border-t border-[#B6E63A]"
         >
-          <img src={Help} alt="" />
+          <img src="/src/assets/images/Help.png" alt="" />
           <span className="font-bold">Help Center</span>
         </Link>
         <Link
           to=""
           className="flex items-center space-x-10 p-3 border-t border-b border-[#B6E63A]"
         >
-          <img src={Logout} alt="" />
+          <img src="/src/assets/images/Logout.png" alt="" />
           <span className="font-bold">Log out</span>
         </Link>
       </ul>

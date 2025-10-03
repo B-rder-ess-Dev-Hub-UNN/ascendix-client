@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import cards from "../db/cards";
-import ellipse from "../assets/images/ellipse.png";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -57,7 +56,7 @@ const QuestCard = ({ category, status }) => {
                 <p className="text-xs text-white/70">{card.category}</p>
                 <div className="flex justify-between items-center">
                   <span className="flex items-center space-x-1">
-                    <img src={ellipse} alt="" className="h-4" />
+                    <img src="/src/assets/images/ellipse.png" alt="" className="h-4" />
                     <p className="text-sm">{card.token} ASC Token</p>
                   </span>
                   {card.status === 'Ongoing' && (
