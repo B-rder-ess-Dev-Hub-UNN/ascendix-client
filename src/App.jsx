@@ -1,11 +1,15 @@
 import { Routes, Route } from 'react-router-dom'
+
 import SecondaryLayout from "./layouts/SecondaryLayout";
+import PrimaryLayout from "./layouts/PrimaryLayout";
+import AdminLayout from "./layouts/AdminLayout";
+
 import './index.css'
+
 import LandingPage from './pages/LandingPage'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import EmailVerified from './pages/EmailVerified';
-import PrimaryLayout from './layouts/PrimaryLayout';
 import Profile from './pages/Profile';
 import SettingPage from './pages/SettingPage';
 import HelpCenter from './pages/HelpCenter';
@@ -25,6 +29,9 @@ import Certification from "./pages/courses/Certification";
 import Assessment from "./pages/courses/Grade";
 import Survey from './pages/Survey';
 import Task from './pages/Task';
+
+// admin 
+import User from './pages/admin/User';
 
 
 const App = () => {
@@ -60,6 +67,10 @@ const App = () => {
           <Route path="/courses/grade" element={<Assessment />} />
           <Route path="/survey" element={<Survey />} />
           <Route path="/task" element={<Task />} />
+        </Route>
+
+        <Route element={<AdminLayout />}>
+          <Route path="/admin/user" element={<User />} />
         </Route>
       </Routes>
     </>
