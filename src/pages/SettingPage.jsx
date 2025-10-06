@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const SettingPage = () => {
   return (
     <section className="min-h-screen flex flex-col  bg-[#1D1751] p-5 md:p-20 text-white space-y-10">
-      <span className="flex space-x-2 items-center">
+      <span className=" hidden md:flex space-x-2 items-center">
         <FaArrowLeft />
         <h1 className="font-extrabold text-xl">Settings </h1>
       </span>
@@ -12,7 +12,7 @@ const SettingPage = () => {
         <img src="/src/assets/images/Avatar.png" alt="" className="h-10 md:h-30" />
 
         {/* make dynamic for username and id  */}
-        <div className="flex flex-col space-y-3">
+        <div className="flex flex-col md:space-y-3">
           <span className="font-semibold md:font-bold">username</span>
           <span className="text-sm">UID: 290937864668</span>
         </div>
@@ -40,7 +40,7 @@ const SettingPage = () => {
           <span className="font-bold">Change wallet</span>
         </Link>
         <Link
-          to=""
+          to="/help"
           className="flex items-center space-x-10 p-3 border-t border-[#B6E63A]"
         >
           <img src="/src/assets/images/Help.png" alt="" />

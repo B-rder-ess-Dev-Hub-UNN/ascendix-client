@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import { IoMenu } from "react-icons/io5";
 
 const Navbar = () => {
   const [MenuOpen, setMenuOpen] = useState(false);
@@ -52,6 +53,11 @@ const Navbar = () => {
             aria-expanded={MenuOpen}
           >
             <img src="/src/assets/images/Avatar.png" alt="User avatar" className="h-10 rounded-full border-2 border-white/20 hover:border-white/40 transition-colors" />
+            <img
+              src={avatar}
+              alt="User avatar"
+              className="h-10 rounded-full border-2 border-white/20 hover:border-white/40 transition-colors"
+            />
           </button>
 
           {/* Desktop Dropdown Menu */}
@@ -119,6 +125,7 @@ const Navbar = () => {
           <Link>
             <img src="/src/assets/images/notification.png" alt="Notifications" className="h-5" />
           </Link>
+        <div className="flex items-center relative" ref={dropdownRef}>
           <button
             onClick={() => setMenuOpen(!MenuOpen)}
             className="cursor-pointer"
@@ -126,6 +133,7 @@ const Navbar = () => {
             aria-expanded={MenuOpen}
           >
             <img src="/src/assets/images/Avatar.png" alt="User avatar" className="h-10 rounded-full border-2 border-white/20 hover:border-white/40 transition-colors" />
+            <IoMenu className="text-3xl" />
           </button>
         </div>
       </div>
@@ -133,47 +141,45 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {MenuOpen && (
         <div className="md:hidden mt-4 bg-[#1D1751] border border-white/20 rounded-lg shadow-xl overflow-hidden animate-in fade-in-0 slide-in-from-top-2">
-          <div className="py-2">
+          <div className="text-sm">
             <Link
               to="/quests"
-              className="block px-4 py-3 text-sm text-[#B6E63A] hover:bg-white/10 transition-colors font-medium"
+              className="block px-4 py-3 text-sm text-[#B6E63A] hover:bg-white/10 transition-colors font-medium border-b border-white/10"
               onClick={() => setMenuOpen(false)}
             >
               Earn
             </Link>
             <Link
               to="#"
-              className="block px-4 py-3 text-sm bg-gradient-to-r from-[#8653EF] to-[#B6E63A] text-transparent bg-clip-text hover:bg-white/10 transition-colors font-medium"
+              className="block px-4 py-3 hover:bg-white/10 transition-colors font-medium border-b border-white/10"
               onClick={() => setMenuOpen(false)}
             >
               Web3Mission
             </Link>
-            <hr className="border-white/10 my-2" />
             <Link
               to="/profile"
-              className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors"
+              className="block px-4 py-3 hover:bg-white/10 transition-colors border-b border-white/10"
               onClick={() => setMenuOpen(false)}
             >
               Profile
             </Link>
             <Link
               to="/settings"
-              className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors"
+              className="block px-4 py-3 hover:bg-white/10 transition-colors border-b border-white/10"
               onClick={() => setMenuOpen(false)}
             >
               Settings
             </Link>
-            <hr className="border-white/10 my-2" />
             <Link
               to="/login"
-              className="block px-4 py-3 text-sm text-white hover:bg-white/10 transition-colors"
+              className="block px-4 py-3 hover:bg-white/10 transition-colors border-b border-white/10"
               onClick={() => setMenuOpen(false)}
             >
               Login
             </Link>
             <Link
               to="/signup"
-              className="block px-4 py-3 text-sm text-[#B6E63A] hover:bg-white/10 transition-colors font-medium"
+              className="block px-4 py-3 text-[#B6E63A] hover:bg-white/10 transition-colors font-medium"
               onClick={() => setMenuOpen(false)}
             >
               Sign Up
