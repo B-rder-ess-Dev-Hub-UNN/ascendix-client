@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop';
 
 import SecondaryLayout from "./layouts/SecondaryLayout";
 import PrimaryLayout from "./layouts/PrimaryLayout";
@@ -37,6 +38,7 @@ import User from './pages/admin/User';
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route element={<SecondaryLayout />}>
           {/* Define other routes here that will use the SecondaryLayout */}
@@ -76,5 +78,4 @@ const App = () => {
     </>
   );
 }
-
 export default App

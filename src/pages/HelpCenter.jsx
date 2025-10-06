@@ -1,9 +1,5 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Discord from "../assets/images/Discord.png";
-import Github from "../assets/images/Github.png";
-import Twitter from "../assets/images/Twitter.png";
-import Reddits from "../assets/images/Reddits.png";
 
 const HelpCenter = () => {
   return (
@@ -12,6 +8,11 @@ const HelpCenter = () => {
         <FaArrowLeft />
         <h1 className="font-extrabold text-xl">Help Center</h1>
       </span>
+      <div className="flex items-center justify-between">
+        <Link to=""><img src="/src/assets/images/Discord.png" alt="Discord" /></Link>
+        <Link to=""><img src="/src/assets/images/Github.png" alt="Github" /></Link>
+        <Link to=""><img src="/src/assets/images/Twitter.png" alt="Twitter" /></Link>
+        <Link to=""><img src="/src/assets/images/Reddits.png" alt="Reddits" /></Link>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10">
         <Link to=""><img src={Discord} alt="Discord" /></Link>
         <Link to=""><img src={Github} alt="Github" /></Link>

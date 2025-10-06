@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import email from "../assets/images/email.png";
 
 const EmailVerified = () => {
   const navigate = useNavigate();
@@ -18,7 +17,7 @@ const EmailVerified = () => {
     <section className="bg-[#1D1751] min-h-screen flex justify-center items-center p-5">
       <div className="flex flex-col items-center text-white rounded-2xl shadow-2xl shadow-[#B6E63A33] p-6 md:p-8 space-y-6">
         {/* Email Icon */}
-        <img src={email} alt="Email verification" className="w-24 h-24" />
+        <img src="/src/assets/images/email.png" alt="Email verification" className="w-24 h-24" />
 
         {/* Title */}
         <h1 className="font-semibold text-2xl md:text-3xl">Email Verified</h1>

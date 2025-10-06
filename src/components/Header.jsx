@@ -1,6 +1,4 @@
-import logo from "../assets/images/ascendix.png";
 import { Link } from "react-router-dom";
-import avatar from "../assets/images/Avatar.png";
 import { useState } from "react";
 
 const Header = () => {
@@ -13,7 +11,7 @@ const Header = () => {
       <div className="hidden md:flex justify-between items-center">
         <div className="flex items-center space-x-6 ">
           <Link to="/" className="flex items-center space-x-2 cursor-pointer">
-            <img src={logo} alt="Ascendix Logo" className="h-7" />
+            <img src="/src/assets/images/ascendix.png" alt="Ascendix Logo" className="h-7" />
             <span className="text-2xl font-semibold">ascendix</span>
           </Link>
           <div className="flex space-x-4">
@@ -42,11 +40,11 @@ const Header = () => {
       {/* mobile nav  */}
       <div className="flex justify-between md:hidden">
         <Link to="/" className="flex items-center space-x-2 cursor-pointer">
-          <img src={logo} alt="Ascendix Logo" className="h-7" />
+          <img src="/src/assets/images/ascendix.png" alt="Ascendix Logo" className="h-7" />
           <span className="text-2xl font-semibold">ascendix</span>
         </Link>
         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="cursor-pointer">
-          <img src={avatar} alt="" className="h-10"/>
+          <img src="/src/assets/images/Avatar.png" alt="" className="h-10"/>
         </button>
       </div>
 

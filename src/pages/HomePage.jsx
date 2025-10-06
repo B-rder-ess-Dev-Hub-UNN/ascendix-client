@@ -1,6 +1,3 @@
-import course from "../assets/images/Frame 8.png";
-import library from "../assets/images/Frame 9.png";
-import quest from "../assets/images/Frame 10.png";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import QuestCard from "../components/QuestCard";
@@ -61,13 +58,13 @@ const HomePage = () => {
 
         <div className="flex flex-col space-y-5 md:flex-row md:space-x-5 md:space-y-0">
           <Link to="/courses">
-            <img src={course} alt="" />
+            <img src="/src/assets/images/Frame 8.png" alt="" />
           </Link>
           <Link to="/library">
-            <img src={library} alt="" />
+            <img src="/src/assets/images/Frame 9.png" alt="" />
           </Link>
           <Link to="/quests">
-            <img src={quest} alt="" />
+            <img src="/src/assets/images/Frame 10.png" alt="" />
           </Link>
         </div>
       </div>
