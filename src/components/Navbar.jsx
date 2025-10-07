@@ -53,11 +53,6 @@ const Navbar = () => {
             aria-expanded={MenuOpen}
           >
             <img src="/src/assets/images/Avatar.png" alt="User avatar" className="h-10 rounded-full border-2 border-white/20 hover:border-white/40 transition-colors" />
-            <img
-              src={avatar}
-              alt="User avatar"
-              className="h-10 rounded-full border-2 border-white/20 hover:border-white/40 transition-colors"
-            />
           </button>
 
           {/* Desktop Dropdown Menu */}
@@ -121,18 +116,13 @@ const Navbar = () => {
           <span className="text-2xl font-semibold">ascendix</span>
         </Link>
 
-        <div className="flex items-center space-x-1 relative" ref={dropdownRef}>
-          <Link>
-            <img src="/src/assets/images/notification.png" alt="Notifications" className="h-5" />
-          </Link>
         <div className="flex items-center relative" ref={dropdownRef}>
           <button
             onClick={() => setMenuOpen(!MenuOpen)}
             className="cursor-pointer"
             aria-label="User menu"
             aria-expanded={MenuOpen}
-          >
-            <img src="/src/assets/images/Avatar.png" alt="User avatar" className="h-10 rounded-full border-2 border-white/20 hover:border-white/40 transition-colors" />
+          >          
             <IoMenu className="text-3xl" />
           </button>
         </div>

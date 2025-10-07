@@ -9,7 +9,7 @@ const SettingPage = () => {
         <h1 className="font-extrabold text-xl">Settings </h1>
       </span>
       <div className="flex items-center space-x-2 md:space-x-5">
-        <img src="/src/assets/images/Avatar.png" alt="" className="h-10 md:h-30" />
+        <img src="/src/assets/images/Avatar.png" alt="" className="h-20 md:h-30" />
 
         {/* make dynamic for username and id  */}
         <div className="flex flex-col md:space-y-3">
@@ -17,7 +17,7 @@ const SettingPage = () => {
           <span className="text-sm">UID: 290937864668</span>
         </div>
       </div>
-      <ul className="">
+      <ul className="mt-10 md:mt-0">
         <Link
           to=""
           className="flex items-center space-x-10 p-3 border-t border-[#B6E63A]"

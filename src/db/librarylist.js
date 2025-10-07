@@ -1,3 +1,5 @@
+import Abstract from "../../src/assets/images/Abstract.png";
+
 const libraryItems = [
     {
       id: "topology",
@@ -5,7 +7,7 @@ const libraryItems = [
       category: "topology",
       description:
         "Abstract space is a fascinating concept that transcends physical reality, diving into the realms of mathematics, philosophy, and art. It refers to spaces that exist in theory or imagination rather than in the tangible world.",
-      cover: "/src/assets/images/Abstract.png",
+      cover: Abstract,
       badge: "Ongoing",
       token: "6k ASC Token",
       modules: 6
