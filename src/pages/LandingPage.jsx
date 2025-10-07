@@ -3,6 +3,10 @@ import { FaArrowRight } from "react-icons/fa";
 import QuestCard from "../components/QuestCard";
 import LeaderCard from "../components/LeaderCard";
 
+import Frame8 from "../../src/assets/images/Frame8.png"
+import Frame9 from "../../src/assets/images/Frame9.png";
+import Frame10 from "../../src/assets/images/Frame10.png";
+
 const LandingPage = () => {
   return (
     <section className="bg-[#1D1751] min-h-screen flex flex-col text-white p-5 md:p-20 space-y-10">
@@ -58,13 +62,13 @@ const LandingPage = () => {
 
         <div className="flex flex-col space-y-5 md:flex-row md:space-x-5 md:space-y-0">
           <Link to="/courses">
-            <img src="/src/assets/images/Frame 8.png" alt="" />
+            <img src={Frame8} alt="" />
           </Link>
           <Link to="/library">
-            <img src="/src/assets/images/Frame 9.png" alt="" />
+            <img src={Frame9} alt="" />
           </Link>
           <Link to="/quests">
-            <img src="/src/assets/images/Frame 10.png" alt="" />
+            <img src={Frame10} alt="" />
           </Link>
         </div>
       </div>
