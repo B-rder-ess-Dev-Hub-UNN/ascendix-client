@@ -34,6 +34,7 @@ import Task from './pages/Task';
 // admin 
 import User from './pages/admin/User';
 import Token from './pages/admin/Token';
+import Quest from './pages/admin/Quest';
 
 
 const App = () => {
@@ -75,6 +76,7 @@ const App = () => {
         <Route element={<AdminLayout />}>
           <Route path="/admin/user" element={<User />} />
           <Route path="/admin/token" element={<Token />} />
+          <Route path="/admin/quest" element={<Quest />} />
         </Route>
       </Routes>
     </>

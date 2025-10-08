@@ -40,7 +40,7 @@ const Sidebar = () => {
           {isOpen && <span className="font-medium text-lg">Dashboard</span>}
         </Link>
         <Link
-          to=""
+          to="/admin/quest"
           className="w-full flex items-center gap-2 hover:bg-[#271D61] px-3 py-2 rounded-lg transition"
         >
           <img src={quest} alt="" />
