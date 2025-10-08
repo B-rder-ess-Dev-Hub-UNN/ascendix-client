@@ -33,6 +33,7 @@ import Task from './pages/Task';
 
 // admin 
 import User from './pages/admin/User';
+import Token from './pages/admin/Token';
 
 
 const App = () => {
@@ -73,6 +74,7 @@ const App = () => {
 
         <Route element={<AdminLayout />}>
           <Route path="/admin/user" element={<User />} />
+          <Route path="/admin/token" element={<Token />} />
         </Route>
       </Routes>
     </>
