@@ -35,6 +35,8 @@ import Task from './pages/Task';
 import User from './pages/admin/User';
 import Token from './pages/admin/Token';
 import Quest from './pages/admin/Quest';
+import QuestEdit from './pages/admin/QuestEdit';
+import Dashboard from './pages/admin/Dashboard';
 
 
 const App = () => {
@@ -77,6 +79,8 @@ const App = () => {
           <Route path="/admin/user" element={<User />} />
           <Route path="/admin/token" element={<Token />} />
           <Route path="/admin/quest" element={<Quest />} />
+          <Route path="/admin/quest/:id" element={<QuestEdit />} />
+          <Route path="/admin/dashboard" element={<Dashboard />} />
         </Route>
       </Routes>
     </>

@@ -33,7 +33,7 @@ const Sidebar = () => {
 
       <div className="flex-1 space-y-8 p-3">
         <Link
-          to=""
+          to="/admin/dashboard"
           className="w-full flex items-center gap-2 hover:bg-[#271D61] px-3 py-2 rounded-lg transition"
         >
           <TbLayoutDashboard size={20} />

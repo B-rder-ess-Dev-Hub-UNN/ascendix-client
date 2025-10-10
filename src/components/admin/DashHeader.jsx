@@ -23,7 +23,7 @@ const DashHeader = () => {
         <div className="flex justify-between p-3 items-center">
           <span className="text-xs font-medium">+16 from last month</span>
           <Link
-            to="/admin/users"
+            to="/admin/user"
             className="bg-[#8653EF1A] border border-[#B6E63A80] rounded text-xs font-medium py-2 px-5 cursor-pointer"
           >
             View More
@@ -48,7 +48,7 @@ const DashHeader = () => {
         <div className="flex justify-between p-3 items-center">
           <span className="text-xs font-medium">+16 from last month</span>
           <Link
-            to="/admin/users"
+            to=""
             className="bg-[#8653EF1A] border border-[#B6E63A80] rounded text-xs font-medium py-2 px-5 cursor-pointer"
           >
             View More
@@ -73,7 +73,7 @@ const DashHeader = () => {
         <div className="flex justify-between p-3 items-center">
           <span className="text-xs font-medium">+16 from last month</span>
           <Link
-            to="/admin/users"
+            to=""
             className="bg-[#8653EF1A] border border-[#B6E63A80] rounded text-xs font-medium py-2 px-5 cursor-pointer"
           >
             View More
@@ -98,7 +98,7 @@ const DashHeader = () => {
         <div className="flex justify-between p-3 items-center">
           <span className="text-xs font-medium">+16 from last month</span>
           <Link
-            to="/admin/users"
+            to="/admin/quest"
             className="bg-[#8653EF1A] border border-[#B6E63A80] rounded text-xs font-medium py-2 px-5 cursor-pointer"
           >
             View More
