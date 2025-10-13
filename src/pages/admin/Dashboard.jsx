@@ -197,11 +197,21 @@ const Dashboard = () => {
 
       {/* User Metrics */}
       <div className="border border-[#B6E63A80] rounded-lg p-4 space-y-4">
-        <div>
-          <p className="text-xl font-semibold">User Metrics Overview</p>
-          <p className="text-sm">User Identity and website usage analytics.</p>
+        <div className="flex justify-between items-center">
+          <div>
+            <p className="text-xl font-semibold">User Metrics Overview</p>
+            <p className="text-sm">
+              User Identity and website usage analytics.
+            </p>
+          </div>
+          <button
+            onClick={() => navigate("/admin/user")}
+            className="border border-[#B6E63A80] px-3 py-1 rounded-md text-sm hover:bg-[#8653EF1A]"
+          >
+            View All
+          </button>
         </div>
-        
+
         <div className="space-y-5">
           {/* Header */}
           <div className="grid grid-cols-8 pb-2">

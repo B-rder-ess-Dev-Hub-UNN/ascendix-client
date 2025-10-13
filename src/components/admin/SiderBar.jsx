@@ -9,7 +9,7 @@ import logo from "../../assets/images/ascendix.png";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
 
 
@@ -47,7 +47,7 @@ const Sidebar = () => {
           {isOpen && <span className="font-medium text-lg">Quest</span>}
         </Link>
         <Link
-          to=""
+          to="/admin/library"
           className="w-full flex items-center gap-2 hover:bg-[#271D61] px-3 py-2 rounded-lg text-sm transition"
         >
           <img src={library} alt="" />
