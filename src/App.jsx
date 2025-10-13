@@ -38,6 +38,7 @@ import Quest from './pages/admin/Quest';
 import QuestEdit from './pages/admin/QuestEdit';
 import Dashboard from './pages/admin/Dashboard';
 import AdminLib from './pages/admin/AdminLib';
+import Course from './components/admin/Course';
 
 
 const App = () => {
@@ -83,6 +84,7 @@ const App = () => {
           <Route path="/admin/quest/:id" element={<QuestEdit />} />
           <Route path="/admin/dashboard" element={<Dashboard />} />
           <Route path="/admin/library" element={<AdminLib />} />
+          <Route path="/admin/course" element={<Course />} />
         </Route>
       </Routes>
     </>
