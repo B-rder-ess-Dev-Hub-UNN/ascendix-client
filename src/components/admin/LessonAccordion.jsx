@@ -94,8 +94,7 @@ export const LessonAccordion = ({
             value={lesson.title}
             onChange={handleTitleChange}
             placeholder="Enter lesson title"
-            className="flex-1 text-sm font-medium outline-none bg-transparent 
-                       text-white w-full"
+            className="flex-1 text-sm font-medium outline-none text-white w-full"
           />
         </div>
 
@@ -127,8 +126,7 @@ export const LessonAccordion = ({
               {lesson.files.map((file) => (
                 <div
                   key={file.name}
-                  className="flex items-center justify-between bg-[#271D61] 
-                           p-3 rounded-lg border border-[#2a254f]"
+                  className="flex items-center justify-between bg-[#271D61] p-3 rounded-lg border border-[#2a254f]"
                 >
                   {/* File Preview + Details */}
                   <div className="flex items-center gap-3 flex-1">
