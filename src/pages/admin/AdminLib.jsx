@@ -1,34 +1,21 @@
 import { useState } from "react";
 import LibraryHeader from "../../components/admin/LibraryHeader";
-import { Link } from "react-router-dom";
 import asc2 from "../../assets/images/asc2.jpg";
+import AddLibModal from "../../components/admin/AddLibModal";
 
 const AdminLib = () => {
-  // Temporary static data (you can later fetch this from your backend)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [quests] = useState([
-    {
-      id: 1,
-      name: "Survey on AI",
-      limit: "100",
-      image: asc2,
-    },
-    {
-      id: 2,
-      name: "Abstract Survey",
-      limit: "0.5",
-      image: asc2,
-    },
-    {
-      id: 3,
-      name: "Youtube Quiz",
-      limit: "0.5",
-      image: asc2,
-    },
+    { id: 1, name: "Survey on AI", limit: "100", image: asc2 },
+    { id: 2, name: "Abstract Survey", limit: "0.5", image: asc2 },
+    { id: 3, name: "Youtube Quiz", limit: "0.5", image: asc2 },
   ]);
 
   return (
-    <section className="flex-1 space-y-10  rounded-lg m-5 p-5 min-h-screen">
+    <section className="flex-1 space-y-10 rounded-lg m-5 p-5 min-h-screen">
       <LibraryHeader />
+
       <div className="min-h-screen p-6 space-y-8 border border-[#B6E63A80] rounded-xl">
         {/* Header */}
         <div className="flex items-center justify-between">
@@ -36,15 +23,15 @@ const AdminLib = () => {
             <h2 className="text-xl font-semibold">Library</h2>
             <p className="text-sm">Hold courses in sections</p>
           </div>
-          <Link
-            to=""
-            className="bg-[#8653EF1A] text-sm px-4 py-2 border border-[#B6E63A80] rounded-md"
+          <button
+            onClick={() => setIsModalOpen(!false)}
+            className="text-sm px-4 py-2 border border-[#B6E63A80] rounded-md hover:bg-[#A0CF30] hover:text-black"
           >
             Add Library
-          </Link>
+          </button>
         </div>
 
-        {/* Library Cards */}
+        {/* Library List */}
         <div className="space-y-4">
           {quests.map((quest) => (
             <div
@@ -59,22 +46,22 @@ const AdminLib = () => {
                 />
                 <div>
                   <p className="text-md font-medium">{quest.name}</p>
-                  <p className="text-sm">
-                    {quest.limit}{" "}courses in this Library
+                  <p className="text-sm text-gray-300">
+                    {quest.limit} courses in this Library
                   </p>
                 </div>
               </div>
 
-              <Link
-                to={`/admin/`}
-                className="bg-[#8653EF1A] border border-[#B6E63A80] text-sm px-4 py-2 rounded-md cursor-pointer"
-              >
+              <button className="bg-[#8653EF1A] border border-[#B6E63A80] text-sm px-4 py-2 rounded-md cursor-pointer hover:bg-[#271D61]">
                 Edit Library
-              </Link>
+              </button>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      <AddLibModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };

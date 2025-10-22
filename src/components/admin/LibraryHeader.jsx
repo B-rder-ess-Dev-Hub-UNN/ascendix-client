@@ -37,7 +37,7 @@ const LibraryHeader = () => {
       </NavLink>
 
       <NavLink
-        to="/admin/grading"
+        to="/admin/assesment"
         className={({ isActive }) =>
           `${baseClass} ${isActive ? activeClass : inactiveClass}`
         }

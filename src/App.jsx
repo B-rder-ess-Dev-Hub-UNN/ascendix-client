@@ -39,6 +39,10 @@ import QuestEdit from './pages/admin/QuestEdit';
 import Dashboard from './pages/admin/Dashboard';
 import AdminLib from './pages/admin/AdminLib';
 import Course from './components/admin/Course';
+import Modules from './pages/admin/Modules';
+import AddModule from "./pages/admin/AddModule";
+import Assesment from "./pages/admin/Assesment";
+import UpdateModule from './pages/admin/UpdateModules';
 
 
 const App = () => {
@@ -85,6 +89,16 @@ const App = () => {
           <Route path="/admin/dashboard" element={<Dashboard />} />
           <Route path="/admin/library" element={<AdminLib />} />
           <Route path="/admin/course" element={<Course />} />
+          <Route path="/admin/modules/:courseId" element={<Modules />} />
+          <Route path="/admin/assesment" element={<Assesment />} />
+          <Route
+            path="/admin/modules/:courseId/add-module"
+            element={<AddModule />}
+          />
+          <Route
+            path="/admin/modules/:courseId/update-module/:moduleId"
+            element={<UpdateModule />}
+          />
         </Route>
       </Routes>
     </>

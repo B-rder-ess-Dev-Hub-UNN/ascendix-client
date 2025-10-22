@@ -1,9 +1,7 @@
-import { useState } from "react";
-import LibraryHeader from "../../components/admin/LibraryHeader";
 import { Link } from "react-router-dom";
 import asc2 from "../../assets/images/asc2.jpg";
 import ellipse from "../../assets/images/ellipse.png";
-
+import LibraryHeader from "../../components/admin/LibraryHeader";
 
 const Course = () => {
   const courses = [
@@ -12,28 +10,40 @@ const Course = () => {
       title: "Abstract Spaces",
       token: "0.5",
       description:
-        "Abstract space is a fascinating concept that transcends physical reality, diving into the realms of mathematics, philosophy, and art. It refers to spaces that exist in theory or imagination rather than in the tangible world.",
+        "Abstract space is a fascinating concept that transcends physical reality, diving into the realms of mathematics, philosophy, and art.",
       image: asc2,
-      module: "",
     },
-    // Duplicate for demo
-    ...Array(11).fill({
-      id: Math.random(),
-      title: "Abstract Spaces",
-      token: "0.5",
+    {
+      id: 2,
+      title: "Topology Fundamentals",
+      token: "0.8",
       description:
-        "Abstract space is a fascinating concept that transcends physical reality, diving into the realms of mathematics, philosophy, and art. It refers to spaces that exist in theory or imagination rather than in the tangible world.",
+        "Master the principles of topological spaces, continuity, and connectedness.",
       image: asc2,
-      module: "",
-    }),
+    },
+    {
+      id: 3,
+      title: "Algebraic Structures",
+      token: "0.6",
+      description:
+        "Explore groups, rings, fields, and their applications in modern mathematics.",
+      image: asc2,
+    },
+    {
+      id: 4,
+      title: "Real Analysis",
+      token: "0.7",
+      description:
+        "Rigorous foundations of calculus, limits, sequences, and series.",
+      image: asc2,
+    },
   ];
 
   return (
-    <div className="flex-1 space-y-10  rounded-lg m-5 p-5 min-h-screen">
+    <div className="flex-1 space-y-10 rounded-lg m-5 p-5 min-h-screen">
       <LibraryHeader />
-      <div className="min-h-screen p-6 space-y-8 border border-[#B6E63A80] rounded-xl">
-        {/* Header Section */}
 
+      <div className="min-h-screen p-6 space-y-8 border border-[#B6E63A80] rounded-xl">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-xl font-semibold">Topology</h2>
@@ -47,40 +57,50 @@ const Course = () => {
           </Link>
         </div>
 
-        {/* Courses Grid */}
+        {/* ✅ FIXED LAYOUT - SAME COLORS */}
         <div className="grid gap-2 grid-cols-4">
-          {courses.map((course, index) => (
-            <div
-              key={index}
-              className="flex-1 p-2 border border-[#B6E63A80] space-y-2 rounded-xl"
+          {courses.map((course) => (
+            <Link
+              to={`/admin/modules/${course.id}`}
+              key={course.id}
+              className="flex flex-col h-[380px] border border-[#B6E63A80] rounded-xl p-2 space-y-2 hover:shadow-lg transition cursor-pointer"
             >
+              {/* Image - Fixed Height */}
               <img
                 src={course.image}
                 alt={course.title}
-                className="h-40 w-full object-cover rounded-md"
+                className="h-40 w-full object-cover rounded-md flex-shrink-0"
               />
 
-              <div className="flex justify-between">
-                <p className="font-medium">{course.title}</p>
-                <span className="flex items-center space-x-1">
-                  <img src={ellipse} alt="" className="h-4" />
-                  <span className="text-sm">{course.token} ASC Token</span>
-                </span>
-              </div>
+              {/* Content - Flex Grow */}
+              <div className="flex-1 flex flex-col justify-between space-y-2">
+                {/* Title & Token Row - Fixed Height */}
+                <div className="flex justify-between items-start h-12">
+                  <p className="font-medium text-sm line-clamp-2 flex-1 pr-2">
+                    {course.title}
+                  </p>
+                  <span className="flex items-center space-x-1 flex-shrink-0">
+                    <img src={ellipse} alt="" className="h-4" />
+                    <span className="text-sm">{course.token} ASC Token</span>
+                  </span>
+                </div>
 
-              <div>
-                <p className="text-xs">{course.description}</p>
-              </div>
+                {/* Description - Fixed Height */}
+                <p className="text-xs line-clamp-3 flex-1">
+                  {course.description}
+                </p>
 
-              <div className="flex justify-between">
-                <button className="bg-[#271D61] px-3 py-1 rounded-md text-sm border border-[#B6E63A80]">
-                  Edit Course
-                </button>
-                <button className="bg-[#FF450080] px-3 py-1 rounded-md text-sm border border-[#B6E63A80]">
-                  Delete Course
-                </button>
+                {/* Buttons - ALWAYS BOTTOM - Fixed Height */}
+                <div className="flex justify-between h-8 mt-auto">
+                  <button className="bg-[#FF450080] px-8 py-1 rounded-md text-sm border border-[#B6E63A80] flex-1 mr-1">
+                    Delete
+                  </button>
+                  <button className="bg-[#271D61] px-8 py-1 rounded-md text-sm border border-[#B6E63A80] flex-1 ml-1">
+                    Edit
+                  </button>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -89,4 +109,3 @@ const Course = () => {
 };
 
 export default Course;
-
